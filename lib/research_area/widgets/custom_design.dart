@@ -11,13 +11,14 @@ class CustomDesign extends CustomClipper<Path>{
 
           
     Path path_0 = Path();
-    path_0.moveTo(size.width*-0.0010600,size.height*0.0449200);
-    path_0.lineTo(size.width*0.1928000,size.height*0.1006000);
-    path_0.lineTo(size.width*1.0032000,size.height*0.0024000);
-    path_0.lineTo(size.width*1.0020000,size.height*1.0033400);
-    path_0.lineTo(size.width*-0.0080000,size.height);
-    path_0.lineTo(size.width*-0.0010600,size.height*0.0449200);
+    path_0.moveTo(size.width*-0.0048000,size.height*0.0186923);
+    path_0.lineTo(size.width*0.1344000,size.height*0.0356923);
+    path_0.lineTo(size.width*0.9984000,size.height*0.0024615);
+    path_0.lineTo(size.width*1.0008000,size.height*1.0012308);
+    path_0.lineTo(size.width*-0.0076000,size.height*1.0010000);
+    path_0.lineTo(size.width*-0.0048000,size.height*0.0186923);
     path_0.close();
+
 
     return path_0;
   }
