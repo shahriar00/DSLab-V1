@@ -1,3 +1,4 @@
+import 'package:dslab/reasearch_publication/view/research_publication.dart';
 import 'package:dslab/research_area/view/research_area.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ResearchArea(),
+    //  home: const ResearchArea(),
+
+     home: const ResearchPublication(),
     );
   }
 }

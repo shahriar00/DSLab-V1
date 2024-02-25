@@ -217,7 +217,12 @@ class _ResearchAreaState extends State<ResearchArea> {
          const SizedBox(
             height: 20,
           ),
-          Image.asset("images/nlp.jpg"),
+          Container(
+            clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(
+                  borderRadius:
+                      BorderRadius.circular(15) // Adjust the radius as needed
+                  ),child: Image.asset("images/nlp.jpg")),
           const SizedBox(
             height: 20,
           ),
@@ -250,7 +255,12 @@ class _ResearchAreaState extends State<ResearchArea> {
          const SizedBox(
             height: 20,
           ),
-          Image.asset("images/cv.jpg"),
+          Container(
+            clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(
+                  borderRadius:
+                      BorderRadius.circular(15) // Adjust the radius as needed
+                  ),child: Image.asset("images/cv.jpg")),
          const  SizedBox(
             height: 20,
           ),
@@ -282,7 +292,12 @@ class _ResearchAreaState extends State<ResearchArea> {
          const SizedBox(
             height: 20,
           ),
-          Image.asset("images/statistics.png"),
+          Container(
+            clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(
+                  borderRadius:
+                      BorderRadius.circular(15) // Adjust the radius as needed
+                  ),child: Image.asset("images/statistics.png")),
            const SizedBox(
             height: 20,
           ),
