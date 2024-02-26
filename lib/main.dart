@@ -1,5 +1,5 @@
+import 'package:dslab/notification/view/notification_view.dart';
 import 'package:dslab/reasearch_publication/view/research_publication.dart';
-import 'package:dslab/research_area/view/research_area.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +21,9 @@ class MyApp extends StatelessWidget {
       ),
     //  home: const ResearchArea(),
 
-     home: const ResearchPublication(),
+   //  home: const ResearchPublication(),
+
+   home: const NotificationScreen(),
     );
   }
 }
