@@ -8,14 +8,15 @@ class CardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(10.0),
+      margin: EdgeInsets.only(left: 10,right: 10,bottom: 20),
+     
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ListTile(
-            title: Text('List ${listData[0]}'),
-          ),
-          Divider(),
+          // ListTile(
+          //   title: Text('List ${listData[0]}'),
+          // ),
+         // Divider(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: List.generate(

@@ -45,53 +45,47 @@ class _NotificationScreenState extends State<NotificationScreen> {
           ),
         ],
       ),
-      body: ListView(
-        children:[  Column(
-          children: [
-           const Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 35, top: 30),
-                  child: Text(
-                    "Notification",
-                    style: TextStyle(
-                      shadows: [
-                        Shadow(
-                          blurRadius: 10.0, // shadow blur
-                          color: Colors.grey, // shadow color
-                          offset: Offset(
-                              2.0, 2.0), // how much shadow will be shown
-                        ),
-                      ],
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF168773),
+      body: Column(
+        children: [
+                 ClipPath(
+                clipper: CustomDesign(),
+                child: Container(
+                  height: 200,
+                  width: deviceWidth,
+                  color: Color(0xFF2E9481),
+                  child: SizedBox(
+                    height: 150,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 30,top: 50),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Notifications",
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 10.0, // shadow blur
+                                  color: Colors.grey, // shadow color
+                                  offset: Offset(2.0, 2.0), // how much shadow will be shown
+                                ),
+                              ],
+                            ),
+                          ),
+            
+                         
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ],
-            ),
-            ClipPath(
-              clipper: CustomDesign(),
-              child: Container(
-                height: deviceHeight*2,
-                width: deviceWidth,
-                color: Color(0xFF204895),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                   const SizedBox(
-                      height: 150,
-                    ),
-                  
-                    Expanded(child: NotificationListsWithCards()),
-              
-                  ],
-                ),
               ),
-            ),
-          ],
-        ),]
+      
+               Expanded(child: NotificationListsWithCards()),
+        ],
       ),
     );
   }
