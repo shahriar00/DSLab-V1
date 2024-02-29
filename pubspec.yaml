@@ -37,6 +37,16 @@ dependencies:
   cupertino_icons: ^1.0.2
   drop_shadow_image: ^0.9.1
   drop_shadow: ^0.1.0
+  firebase_core: 
+  firebase_auth: 
+  cloud_firestore: 
+  firebase_storage: 
+  file_picker: 
+  easy_pdf_viewer: 
+  firebase_analytics:
+  http:
+  path_provider: 
+  intl: 
 
 dev_dependencies:
   flutter_test:
