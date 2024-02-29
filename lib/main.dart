@@ -1,5 +1,6 @@
 import 'dart:io';
-
+import 'package:dslab/about_us/view/about_us_view.dart';
+import 'package:dslab/menu/view/menu_view.dart';
 import 'package:dslab/notification/admin/login/view/admin_login.dart';
 import 'package:dslab/notification/admin/view/pdf_upload.dart';
 import 'package:dslab/notification/view/notification_view.dart';
@@ -39,13 +40,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-     // home: const ResearchArea(),
 
-  //  home: const ResearchPublication(),
 
-  // home: const NotificationScreen(),
+// home: samplePage(),
 
-  home: NotificationScreen(),
+home: const AboutUsScreen(),
     );
   }
 }
