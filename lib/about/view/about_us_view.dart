@@ -1,6 +1,6 @@
 import 'package:drop_shadow/drop_shadow.dart';
 import 'package:drop_shadow_image/drop_shadow_image.dart';
-import 'package:dslab/about_us/widgets/custom_design.dart';
+import 'package:dslab/about/widgets/custom_design.dart';
 import 'package:flutter/material.dart';
 
 class AboutUsScreen extends StatefulWidget {
@@ -118,7 +118,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
   }
 
   Widget ResearchTitle() {
-    return Row(
+    return const Row(
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 35, top: 35),

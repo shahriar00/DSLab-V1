@@ -1,5 +1,6 @@
 import 'package:drop_shadow/drop_shadow.dart';
 import 'package:drop_shadow_image/drop_shadow_image.dart';
+import 'package:dslab/reasearch_publication/widgets/custom_design.dart';
 import 'package:dslab/research_area/widgets/custom_design.dart';
 import 'package:flutter/material.dart';
 
@@ -47,40 +48,60 @@ class _ResearchPublicationState extends State<ResearchPublication> {
         ],
       ),
       body: SingleChildScrollView(
+        
         child: Container(
+          color: Color(0xFF204895),
           child: Column(
             children: [
-              ResearchTitle(),
               ClipPath(
-                clipper: CustomDesign(),
+                clipper: ResearchPublicationCustomDesign(),
                 child: Container(
-                  height: deviceHeight * 3.80,
+                  height: 200,
                   width: deviceWidth,
-                  color: Color(0xFF204895),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(
-                        height: 150,
+                  color: Colors.white,
+                  child: const SizedBox(
+                    height: 150,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 30, top: 50),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Research Publication",
+                            style: TextStyle(
+                              fontSize: 35,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF238E7B),
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 10.0, // shadow blur
+                                  color: Colors.grey, // shadow color
+                                  offset: Offset(2.0,
+                                      2.0), // how much shadow will be shown
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-
-                      DataDrivenApproch(),
-
-                      //machine learning ...........
-
-                      MachineLearning(),
-
-                      //cryptocrurrency related..............
-
-                      Cryptocurrecy(),
-
-                      //Footer ..................
-                      //
-                      Footer()
-                    ],
+                    ),
                   ),
                 ),
               ),
+
+              DataDrivenApproch(),
+
+              //machine learning ...........
+
+              MachineLearning(),
+
+              //cryptocrurrency related..............
+
+              Cryptocurrecy(),
+
+              //Footer ..................
+              //
+              Footer()
             ],
           ),
         ),

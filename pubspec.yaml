@@ -47,6 +47,11 @@ dependencies:
   http:
   path_provider: 
   intl: 
+  google_maps_flutter: 
+  flutter_lints: 
+  google_fonts: 
+  flutter_screenutil: 
+  gap: 
 
 dev_dependencies:
   flutter_test:

@@ -56,62 +56,58 @@ class _ResearchAreaState extends State<ResearchArea> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          color: Color(0xFF204895),
           child: Column(
             children: [
-              const Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 35, top: 30),
-                    child: Text(
-                      "Research Area",
-                      style: TextStyle(
-                        shadows: [
-                          Shadow(
-                            blurRadius: 10.0, // shadow blur
-                            color: Colors.grey, // shadow color
-                            offset: Offset(
-                                2.0, 2.0), // how much shadow will be shown
+              ClipPath(
+                clipper: ResearchAreaCustomDesign(),
+                child: Container(
+                  height: 200,
+                  width: deviceWidth,
+                  color: Colors.white,
+                  child: const SizedBox(
+                    height: 150,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 30, top: 50),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Research Area",
+                            style: TextStyle(
+                              fontSize: 35,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF238E7B),
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 10.0, // shadow blur
+                                  color: Colors.grey, // shadow color
+                                  offset: Offset(2.0,
+                                      2.0), // how much shadow will be shown
+                                ),
+                              ],
+                            ),
                           ),
                         ],
-                        fontSize: 35,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF168773),
                       ),
                     ),
                   ),
-                ],
-              ),
-              ClipPath(
-                clipper: CustomDesign(),
-                child: Container(
-                  height: deviceHeight * 2.85,
-                  width: deviceWidth,
-                  color: Color(0xFF204895),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(
-                        height: 150,
-                      ),
-
-                      NLP(),
-
-                      //Computer Vision ...........
-
-                      ComputerVision(),
-
-                      //Statistics and Probability..............
-
-                      Statistics(),
-
-                      //Footer ..................
-
-                      // const FooterSection()
-                      Footer()
-                    ],
-                  ),
                 ),
               ),
+              NLP(),
+
+              //Computer Vision ...........
+
+              ComputerVision(),
+
+              //Statistics and Probability..............
+
+              Statistics(),
+
+              //Footer ..................
+
+              // const FooterSection()
+              Footer()
             ],
           ),
         ),
