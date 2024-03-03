@@ -7,11 +7,11 @@ class collabroteCLIP extends CustomClipper<Path> {
     double h = size.height;
 
     final path_0 = Path();
-    path_0.moveTo(416, 521);
-    path_0.lineTo(0, 521);
-    path_0.lineTo(0, 147.623);
-    path_0.lineTo(416, 1);
-    path_0.lineTo(416, 521);
+    path_0.moveTo(size.width * 1.005587, size.height * 1.006593);
+    path_0.lineTo(0, size.height * 1.006593);
+    path_0.lineTo(0, size.height * 0.2846154);
+    path_0.lineTo(size.width * 1.005587, size.height * 0.001098901);
+    path_0.lineTo(size.width * 1.005587, size.height * 1.006593);
     path_0.close();
     return path_0;
   }

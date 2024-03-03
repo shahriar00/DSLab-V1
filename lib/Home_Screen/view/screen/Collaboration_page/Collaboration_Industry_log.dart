@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class collaborationIndustryLogo extends StatefulWidget {
   const collaborationIndustryLogo({super.key});
@@ -11,21 +12,22 @@ class _collaborationLogoState extends State<collaborationIndustryLogo> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
-      width: 400,
+      height: 70.h,
+      width: 380.w,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: 4,
           itemBuilder: (BuildContext context, int index) {
             return Container(
               color: Colors.transparent,
-              height: 200,
-              width: 100,
-              padding: EdgeInsets.all(6),
+              height: 150.h,
+              width: 95.w,
+              padding: EdgeInsets.all(3),
               child: Center(
                 child: Image.asset(
-                  'assets/skilljobs.png',
+                  'images/skilljobs.png',
                   alignment: Alignment.center,
+                  height: 150.h,
                 ),
               ),
             );

@@ -7,12 +7,24 @@ class bottomClipCode extends CustomClipper<Path> {
     double h = size.height;
 
     final path_0 = Path();
-    path_0.moveTo(309.618, 16.4608);
-    path_0.cubicTo(205.914, -7.023, 134.08, -1.07042, 0, 16.4608);
-    path_0.lineTo(0, 126);
-    path_0.lineTo(415, 126);
-    path_0.lineTo(415, 7.10179);
-    path_0.cubicTo(371.585, 23.9788, 348.74, 24.6871, 309.618, 16.4608);
+    path_0.moveTo(size.width * 0.7454556, size.height * 0.1305908);
+    path_0.cubicTo(
+        size.width * 0.4949611,
+        size.height * -0.05383202,
+        size.width * 0.3214472,
+        size.height * -0.007085156,
+        0,
+        size.height * 0.1305908);
+    path_0.lineTo(0, size.height * 0.9908257);
+    path_0.lineTo(size.width, size.height * 0.9908257);
+    path_0.lineTo(size.width, size.height * 0.05709294);
+    path_0.cubicTo(
+        size.width * 0.8951333,
+        size.height * 0.1896321,
+        size.width * 0.8399528,
+        size.height * 0.1951945,
+        size.width * 0.7454556,
+        size.height * 0.1305908);
     path_0.close();
     return path_0;
   }

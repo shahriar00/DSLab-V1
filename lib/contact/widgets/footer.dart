@@ -11,6 +11,7 @@ class _FooterSectionState extends State<FooterSection> {
   @override
   Widget build(BuildContext context) {
     return Container(
+     color: Color(0xFF204895),
       padding: EdgeInsets.only(left: 20, right: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -120,7 +121,8 @@ class _FooterSectionState extends State<FooterSection> {
                 ),
               ],
             ),
-          )
+          ),
+          SizedBox(height: 20,)
         ],
       ),
     );

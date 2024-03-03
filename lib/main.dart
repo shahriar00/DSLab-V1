@@ -1,7 +1,12 @@
 import 'dart:io';
-import 'package:dslab/Home_Screen/view/screen/HomeScreen/homeScreen.dart';
+
+import 'package:dslab/Home_Screen/view/screen/homeScreen.dart';
 import 'package:dslab/about/view/about_us_view.dart';
+import 'package:dslab/admin/view/admin_login.dart';
+import 'package:dslab/admin/view/admin_view.dart';
+import 'package:dslab/contact/admin/messege_view.dart';
 import 'package:dslab/contact/view/contact_view.dart';
+import 'package:dslab/contact/widgets/contact_part.dart';
 import 'package:dslab/contact/widgets/google_map.dart';
 import 'package:dslab/menu/view/menu_view.dart';
 import 'package:dslab/notification/admin/login/view/admin_login.dart';
@@ -57,11 +62,13 @@ class MyApp extends StatelessWidget {
       ),
 
 
- home: ContactScreen(),
+ home: MenuPage(),
 
 // home: const AboutUsScreen(),
     );
        },
     );
+    
   }
+  
 }

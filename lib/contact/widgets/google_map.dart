@@ -11,7 +11,7 @@ class GoogleMapScreen extends StatefulWidget {
 }
 
 class _GoogleMapScreenState extends State<GoogleMapScreen> {
-  late GoogleMapController mapcontroller;
+   late GoogleMapController mapcontroller;
   Map<String,Marker> _markers = {};
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
         },
         markers: _markers.values.toSet(),
         
-
+      
       ),
     );
   }

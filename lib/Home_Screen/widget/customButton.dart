@@ -13,8 +13,8 @@ class ProjectButton extends StatelessWidget {
       },
       child: Container(
         alignment: Alignment.center,
-        height: 25.5.h,
-        width: 320.w,
+        height: 40.h,
+        width: 350.w,
         decoration: BoxDecoration(
             color: Color.fromRGBO(77, 176, 91, 10),
             borderRadius: BorderRadius.circular(13),
@@ -30,7 +30,7 @@ class ProjectButton extends StatelessWidget {
           'Projects',
           style: GoogleFonts.martel(
             color: Colors.white,
-            fontSize: 18,
+            fontSize: ScreenUtil().setSp(21),
             fontWeight: FontWeight.bold,
           ),
         ),

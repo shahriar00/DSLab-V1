@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class reviewPage extends StatelessWidget {
   final String number;
@@ -58,18 +59,20 @@ class reviewPage extends StatelessWidget {
                   number,
                   style: GoogleFonts.allerta(
                     color: Colors.black,
-                    fontSize: 24,
+                    fontSize: ScreenUtil().setSp(27.8),
                   ),
                 ),
               ),
-              Gap(10),
+              SizedBox(
+                height: 10.h,
+              ),
               Container(
                 alignment: Alignment.center,
                 child: Text(
                   textOfcard,
                   style: GoogleFonts.roboto(
                     color: Colors.black,
-                    fontSize: 20.55,
+                    fontSize: ScreenUtil().setSp(24.5),
                   ),
                 ),
               ),

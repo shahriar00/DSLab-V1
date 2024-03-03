@@ -13,46 +13,58 @@ class saburKhan extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        topClip(),
+        const topClip(),
         Container(
-          height: 365.h,
-          width: 360.w,
+          // height: 650.h,
+          width: 480.w,
           color: Colors.white,
           child: Column(
             children: [
-              Container(
-                child: Image.asset(
-                  'assets/SaburKhan.png',
-                  scale: 2.6,
+              Padding(
+                padding: const EdgeInsets.only(top: 10.2 * 3),
+                child: Container(
+                  child: Image.asset(
+                    'images/SaburKhan.png',
+                    scale: 2.6,
+                  ),
                 ),
               ),
-              Gap(10 * 2),
+              SizedBox(
+                height: 11 * 2.h,
+              ),
               Text(
                 '“We must remember that there\nwas once prosperous time in our\nlives and it was set up to us to bring it\nback or maintain it”',
                 style: GoogleFonts.allerta(
                   color: Colors.black,
-                  fontSize: 17.5,
+                  fontSize: ScreenUtil().setSp(20),
                   height: 1.6,
                 ),
                 textAlign: TextAlign.center,
               ),
-              Gap(10 * 2),
+              SizedBox(
+                height: 11 * 2.h,
+              ),
               Text(
                 'Dr. Md. Sabur Khan',
                 style: GoogleFonts.allertaStencil(
                   color: Colors.black,
-                  fontSize: 28,
+                  fontSize: ScreenUtil().setSp(33.5),
                 ),
               ),
-              Gap(10 * 2),
+              SizedBox(
+                height: 11 * 2.h,
+              ),
               Text(
                 'Founder & Chairman, Daffodil\nFamily',
                 style: GoogleFonts.roboto(
                   color: Color.fromRGBO(17, 17, 17, 1),
-                  fontSize: 20,
+                  fontSize: ScreenUtil().setSp(24),
                 ),
                 textAlign: TextAlign.center,
               ),
+              SizedBox(
+                height: 40.h,
+              )
             ],
           ),
         ),

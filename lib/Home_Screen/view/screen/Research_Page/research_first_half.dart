@@ -3,6 +3,7 @@ import 'package:dslab/Home_Screen/view/screen/Research_Page/research_card.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class researchFirstPage extends StatelessWidget {
   const researchFirstPage({super.key});
@@ -20,7 +21,7 @@ class researchFirstPage extends StatelessWidget {
               child: Text(
                 'Research',
                 style: GoogleFonts.aBeeZee(
-                  fontSize: 32,
+                  fontSize: ScreenUtil().setSp(35),
                   color: Colors.white,
                   shadows: [
                     Shadow(
@@ -33,7 +34,9 @@ class researchFirstPage extends StatelessWidget {
               ),
             ),
           ),
-          Gap(6),
+          SizedBox(
+            height: 6.h,
+          ),
           Padding(
             padding: const EdgeInsets.only(top: 5.0 * 2, left: 4, right: 20),
             child: Container(
@@ -41,29 +44,37 @@ class researchFirstPage extends StatelessWidget {
               child: Text(
                 'We are a team of out-of-the-box thinkers, with deep expertise in analytics.We love to expand the boundaries on research with our own data.',
                 style: GoogleFonts.allerta(
-                  fontSize: 19,
+                  fontSize: ScreenUtil().setSp(21.7),
                   color: Colors.white,
                 ),
                 textAlign: TextAlign.justify,
               ),
             ),
           ),
-          Gap(13 * 3),
+          SizedBox(
+            height: 14.5 * 3.h,
+          ),
           researchCard(
               title: 'Research Team',
-              assetImage: 'assets/research_team.jpg',
+              assetImage: 'images/research_team.jpg',
               onPressed: () {}),
-          Gap(17 * 3),
+          SizedBox(
+            height: 19 * 3.h,
+          ),
           researchCard(
               title: 'Research Topic',
-              assetImage: 'assets/research_topic.jpg',
+              assetImage: 'images/research_topic.jpg',
               onPressed: () {}),
-          Gap(17 * 3),
+          SizedBox(
+            height: 19 * 3.h,
+          ),
           researchCard(
               title: 'Research Publication',
-              assetImage: 'assets/research_publication.jpg',
+              assetImage: 'images/research_publication.jpg',
               onPressed: () {}),
-          Gap(10 * 3),
+          SizedBox(
+            height: 12 * 3.h,
+          )
         ],
       ),
     );

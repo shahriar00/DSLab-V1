@@ -23,7 +23,7 @@ class researchListView extends StatelessWidget {
             height: MediaQuery.sizeOf(context).height * .0769,
             child: ListTile(
               leading: Image.asset(
-                'assets/massege.png', // Replace with your image URL
+                'images/massege.png', // Replace with your image URL
                 width: 22,
                 height: 22,
               ),

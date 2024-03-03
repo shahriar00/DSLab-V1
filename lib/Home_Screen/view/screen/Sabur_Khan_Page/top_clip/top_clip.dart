@@ -12,8 +12,8 @@ class topClip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      height: 220.5.h,
-      width: 411.w,
+      height: 300.h,
+      width: MediaQuery.of(context).size.width,
       child: ClipPath(
         clipper: topClipSaburKhan(),
         child: Container(
@@ -29,7 +29,7 @@ class topClip extends StatelessWidget {
                   Text(
                     'Some Important\nMotivational\nSpeech',
                     style: GoogleFonts.aBeeZee(
-                      fontSize: 27.5,
+                      fontSize: ScreenUtil().setSp(33),
                       color: Colors.white,
                     ),
                     textAlign: TextAlign.center,

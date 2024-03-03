@@ -107,7 +107,7 @@ class _ContactScreenState extends State<ContactScreen> {
               const SizedBox(
                 height: 20,
               ),
-             
+
               //ThirdSection(),
               const SizedBox(
                 height: 20,
@@ -117,7 +117,7 @@ class _ContactScreenState extends State<ContactScreen> {
               const SizedBox(
                 height: 20,
               ),
-              
+
               const FooterSection(),
 
               const SizedBox(
@@ -151,10 +151,41 @@ class _ContactScreenState extends State<ContactScreen> {
   }
 
   Widget GoogleMapView() {
-    return Container(
-      height: 400,
-      width: MediaQuery.of(context).size.width,
-      child: GoogleMapScreen(),
+    return Padding(
+      padding: const EdgeInsets.only(left: 20, right: 20),
+      child: Container(
+        decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.white,
+              width: 2,
+            ),
+            borderRadius: BorderRadius.circular(15)),
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+           const Center(
+              child:  Text(
+                "Find Us Easily On Google Map",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 400,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+              width: MediaQuery.of(context).size.width,
+              child: GoogleMapScreen(),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

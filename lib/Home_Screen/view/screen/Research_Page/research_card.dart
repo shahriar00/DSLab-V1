@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class researchCard extends StatelessWidget {
   final String title;
@@ -40,14 +41,14 @@ class researchCard extends StatelessWidget {
                 child: Text(
                   title,
                   style: GoogleFonts.allertaStencil(
-                    fontSize: 23,
+                    fontSize: ScreenUtil().setSp(27),
                     color: Color.fromRGBO(9, 129, 107, 1),
                   ),
                 ),
               ),
             ),
             SizedBox(
-              height: 220,
+              height: 237.h,
               child: Container(
                 child: Image.asset(assetImage),
               ),
@@ -55,9 +56,9 @@ class researchCard extends StatelessWidget {
             GestureDetector(
               onTap: onPressed,
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 6.0, right: 12),
+                padding: const EdgeInsets.only(bottom: 8.0, right: 12),
                 child: Container(
-                  height: 17,
+                  height: 17.h,
                   alignment: Alignment.topRight,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -65,11 +66,13 @@ class researchCard extends StatelessWidget {
                       Text(
                         'Read More',
                         style: GoogleFonts.allerta(
-                          fontSize: 14,
+                          fontSize: ScreenUtil().setSp(16.5),
                           color: Color.fromRGBO(32, 72, 149, 1),
                         ),
                       ),
-                      Gap(4),
+                      SizedBox(
+                        width: 4.w,
+                      ),
                       Container(
                           child: Icon(
                         Icons.arrow_forward,

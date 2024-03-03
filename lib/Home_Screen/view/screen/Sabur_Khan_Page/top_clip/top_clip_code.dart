@@ -7,12 +7,24 @@ class topClipSaburKhan extends CustomClipper<Path> {
     double h = size.height;
 
     final path_0 = Path();
-    path_0.moveTo(0, 246.29);
-    path_0.lineTo(0, 0);
-    path_0.lineTo(415, 0);
-    path_0.lineTo(415, 150.483);
-    path_0.cubicTo(364.222, 183.801, 334.89, 199.315, 281.228, 222.05);
-    path_0.cubicTo(187.714, 252.7, 124.604, 255.672, 1, 246.29);
+    path_0.moveTo(size.width * 0.00, size.height * 0.9773413);
+    path_0.lineTo(size.width * 0.00, size.height * 0.00);
+    path_0.lineTo(size.width, size.height * 0.00);
+    path_0.lineTo(size.width, size.height * 0.5971548);
+    path_0.cubicTo(
+        size.width * 0.8776434,
+        size.height * 0.7293690,
+        size.width * 0.8069639,
+        size.height * 0.7909325,
+        size.width * 0.6776578,
+        size.height * 0.8811508);
+    path_0.cubicTo(
+        size.width * 0.4523229,
+        size.height * 1.002778,
+        size.width * 0.3002506,
+        size.height * 1.014571,
+        size.width * 0.002409639,
+        size.height * 0.9773413);
     path_0.close();
     return path_0;
   }

@@ -30,13 +30,13 @@ class aboutUsImage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                child: Image.asset('assets/1751117722411960.png'),
+                child: Image.asset('images/1751117722411960.png'),
               ),
               Gap(6),
               Padding(
                 padding: const EdgeInsets.all(4.0),
                 child: Container(
-                  child: Image.asset('assets/1751117812567999.png'),
+                  child: Image.asset('images/1751117812567999.png'),
                 ),
               )
             ],

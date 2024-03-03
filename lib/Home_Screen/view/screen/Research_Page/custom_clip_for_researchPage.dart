@@ -9,9 +9,9 @@ class customClipForResearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 345.h,
-      width: 391.w,
-      alignment: Alignment.centerLeft,
+      height: 435.h,
+      width: 480.w,
+      alignment: Alignment.topLeft,
       color: Colors.transparent,
       child: customClipResearch(),
     );

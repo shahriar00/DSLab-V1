@@ -5,6 +5,7 @@ import 'package:gap/gap.dart';
 
 import 'fonts/Allerta_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class dsSummit extends StatelessWidget {
   final String buttonText;
@@ -15,6 +16,7 @@ class dsSummit extends StatelessWidget {
   final double buttonCircleRedious;
   final Icon buttonIcon;
   final VoidCallback onPressed;
+  // final double sizeBetweenTextandImage;
 
   const dsSummit({
     Key? key,
@@ -26,6 +28,7 @@ class dsSummit extends StatelessWidget {
     required this.buttonCircleRedious,
     required this.buttonIcon,
     required this.onPressed,
+    //required this.sizeBetweenTextandImage,
   }) : super(key: key);
 
   @override
@@ -38,17 +41,19 @@ class dsSummit extends StatelessWidget {
         width: buttonWidth.w,
         decoration: BoxDecoration(
           color: buttonColor,
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: BorderRadius.circular(27),
         ),
         child: Padding(
           padding: const EdgeInsets.all(2.0),
           child: Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 16),
+                padding: EdgeInsets.only(left: 12),
                 child: Text(
                   buttonText,
-                  style: textThemeAllerta.subtitle2?.copyWith(
+                  style: GoogleFonts.allerta(
+                    fontSize: ScreenUtil().setSp(15.4),
+                    color: Colors.white,
                     shadows: [
                       Shadow(
                         color: Colors.black,
@@ -59,21 +64,23 @@ class dsSummit extends StatelessWidget {
                   ),
                 ),
               ),
-              Gap(10),
-              Padding(
-                padding: const EdgeInsets.all(1.0),
-                child: Container(
-                  height: buttonCircleRedious.h,
-                  width: buttonCircleRedious.h,
-                  decoration: BoxDecoration(
-                    color: buttonCircleColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Center(
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 4),
-                      child: buttonIcon,
-                    ),
+              // SizedBox(
+              //   width: sizeBetweenTextandImage.w,
+              // ),
+              SizedBox(
+                width: 19.w,
+              ),
+              Container(
+                height: buttonCircleRedious.h,
+                width: buttonCircleRedious.h,
+                decoration: BoxDecoration(
+                  color: buttonCircleColor,
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 4),
+                    child: buttonIcon,
                   ),
                 ),
               )

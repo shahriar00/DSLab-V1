@@ -1,14 +1,18 @@
+import 'package:dslab/about/view/about_us_view.dart';
+import 'package:dslab/contact/view/contact_view.dart';
+import 'package:dslab/notification/view/notification_view.dart';
+import 'package:dslab/reasearch_publication/view/research_publication.dart';
+import 'package:dslab/research_area/view/research_area.dart';
 import 'package:flutter/material.dart';
 
-class samplePage extends StatefulWidget {
-  const samplePage({super.key});
+class MenuPage extends StatefulWidget {
+  const MenuPage({super.key});
 
   @override
-  State<samplePage> createState() => _samplePageState();
+  State<MenuPage> createState() => _MenuPageState();
 }
 
-class _samplePageState extends State<samplePage> {
-
+class _MenuPageState extends State<MenuPage> {
   // properties of the front image
   double image_height = 400,
       image_width = 400,
@@ -25,7 +29,7 @@ class _samplePageState extends State<samplePage> {
       BackShape_height = 800,
       BackShape_width = 480,
       Shape_posX = 80,
-      Shape_posY = 380,
+      Shape_posY = 390,
       BackShapePosition = 30;
 
   // Keeps track of current page
@@ -86,7 +90,9 @@ class _samplePageState extends State<samplePage> {
             ),
           ),
         ),
-
+        const SizedBox(
+          height: 10,
+        ),
         // Our Team
         SizedBox(
           width: mq * 0.9,
@@ -113,7 +119,9 @@ class _samplePageState extends State<samplePage> {
             ),
           ),
         ),
-
+        const SizedBox(
+          height: 10,
+        ),
         // Training
         SizedBox(
           width: mq * 0.9,
@@ -140,7 +148,9 @@ class _samplePageState extends State<samplePage> {
             ),
           ),
         ),
-
+        const SizedBox(
+          height: 10,
+        ),
         // Resources
         SizedBox(
           width: mq * 0.9,
@@ -167,12 +177,17 @@ class _samplePageState extends State<samplePage> {
             ),
           ),
         ),
-
+        const SizedBox(
+          height: 10,
+        ),
         // About Us
         SizedBox(
           width: mq * 0.9,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>
+            const AboutUsScreen()));
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
@@ -194,12 +209,17 @@ class _samplePageState extends State<samplePage> {
             ),
           ),
         ),
-
+        const SizedBox(
+          height: 10,
+        ),
         // Contact
         SizedBox(
           width: mq * 0.9,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>
+            const ContactScreen()));
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
@@ -219,17 +239,23 @@ class _samplePageState extends State<samplePage> {
                 letterSpacing: 0.8,
               ),
             ),
+
+            
           ),
         ),
+
+    
       ],
     );
-    Column second_page = Column(
+    Widget second_page = Column(
       children: [
         // Research
         SizedBox(
           width: mq * 0.9,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const ResearchArea()));
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
@@ -251,12 +277,15 @@ class _samplePageState extends State<samplePage> {
             ),
           ),
         ),
-
+const SizedBox(height: 10,),
         // Our Team
         SizedBox(
           width: mq * 0.9,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>
+            const ResearchPublication()));
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
@@ -324,7 +353,9 @@ class _samplePageState extends State<samplePage> {
                           // bell icon button --->
 
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationScreen()));
+                            },
                             icon: Image.asset(
                               'images/notification.gif',
                               width: 35,
@@ -346,6 +377,7 @@ class _samplePageState extends State<samplePage> {
             Positioned(
                 top: 80,
                 left: 20,
+               
                 child: pageChanged ? second_page : first_page),
 
             // <--- elevated button section end
@@ -356,29 +388,38 @@ class _samplePageState extends State<samplePage> {
               duration: AnimationTime,
               top: Shape_posY,
               left: Shape_posX,
+           
               child: Stack(clipBehavior: Clip.none, children: [
                 Positioned(
                   right: BackShapePosition,
-                  child: AnimatedContainer(
-                    duration: AnimationTime,
-                    height: BackShape_height,
-                    width: BackShape_width,
-                    decoration: BoxDecoration(
-                        color: Color(0xffe6eaeb),
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.elliptical(650, 1000),
-                            bottomLeft: Radius.elliptical(Back_border_x, Back_border_y))),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: AnimatedContainer(
+                      duration: AnimationTime,
+                      height: BackShape_height,
+                      width: BackShape_width,
+                      decoration: BoxDecoration(
+                          color: Color(0xffe6eaeb),
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.elliptical(650, 1000),
+                              bottomLeft: Radius.elliptical(
+                                  Back_border_x, Back_border_y))),
+                    ),
                   ),
                 ),
-                AnimatedContainer(
-                  duration: AnimationTime,
-                  height: FrontShape_height,
-                  width: FrontShape_width,
-                  decoration: BoxDecoration(
-                      color: Color(0xFF1D458B),
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.elliptical(600, 800),
-                          bottomLeft: Radius.elliptical(Front_border_x, Front_border_y))),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30,left: 20),
+                  child: AnimatedContainer(
+                    duration: AnimationTime,
+                    height: FrontShape_height,
+                    width: FrontShape_width,
+                    decoration: BoxDecoration(
+                        color: Color(0xFF1D458B),
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.elliptical(600, 800),
+                            bottomLeft: Radius.elliptical(
+                                Front_border_x, Front_border_y))),
+                  ),
                 ),
               ]),
             ),
@@ -403,10 +444,10 @@ class _samplePageState extends State<samplePage> {
                             color: Colors.black))),
                 ClipRect(
                     child: Image.asset(
-                      "images/menupage.png",
-                      height: image_height,
-                      width: image_width,
-                    ))
+                  "images/menupage.png",
+                  height: image_height,
+                  width: image_width,
+                ))
               ]),
             ),
 
