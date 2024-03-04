@@ -1,8 +1,12 @@
+import 'package:dslab/Tranning/Pages/TrainingPage.dart';
 import 'package:dslab/about/view/about_us_view.dart';
 import 'package:dslab/contact/view/contact_view.dart';
+import 'package:dslab/events/event.dart';
 import 'package:dslab/notification/view/notification_view.dart';
 import 'package:dslab/reasearch_publication/view/research_publication.dart';
 import 'package:dslab/research_area/view/research_area.dart';
+import 'package:dslab/resource/resources.dart';
+import 'package:dslab/team/ourteam.dart';
 import 'package:flutter/material.dart';
 
 class MenuPage extends StatefulWidget {
@@ -97,7 +101,10 @@ class _MenuPageState extends State<MenuPage> {
         SizedBox(
           width: mq * 0.9,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>
+            const ourTeam()));
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
@@ -126,7 +133,10 @@ class _MenuPageState extends State<MenuPage> {
         SizedBox(
           width: mq * 0.9,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>
+            const TrainingPage()));
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
@@ -155,7 +165,10 @@ class _MenuPageState extends State<MenuPage> {
         SizedBox(
           width: mq * 0.9,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>
+            const Resources()));
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
@@ -488,7 +501,9 @@ const SizedBox(height: 10,),
                             width: 50,
                             height: 50,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>const Event()));
+                          },
                         ),
                         const Text(
                           'Events',

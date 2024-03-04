@@ -20,15 +20,26 @@ class _FooterState extends State<Footer> {
             height: 50,
           ),
           Image.asset(
-            "images/logo2.png",
-            scale: 6,
+            "images/dsl.jpg",
+            scale: 4,
           ),
           const SizedBox(
             height: 20,
           ),
           const Text(
             "We are a team of out-of-the-box thinkers, with deep expertise in analytics. Our research aims to make sense of large amounts of data.",
-            style: TextStyle(fontSize: 18, color: Colors.white),
+           style: TextStyle(
+                    shadows: [
+                      Shadow(
+                        color: Colors.black,
+                        blurRadius: 1.0,
+                        offset: Offset(3.0, 3.0),
+                      ),
+                    ],
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontStyle: FontStyle.normal,
+                  ),
             textAlign: TextAlign.justify,
           ),
           const SizedBox(
