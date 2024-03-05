@@ -68,7 +68,7 @@ class collabroteMain extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const home(),
+                          builder: (context) => const HomePage(),
                         ),
                       );
                     },

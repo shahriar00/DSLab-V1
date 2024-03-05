@@ -12,6 +12,7 @@ class _FooterState extends State<Footer> {
   Widget build(BuildContext context) {
     return Container(
      color: Color(0xFF204895),
+    
       padding: EdgeInsets.only(left: 20, right: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

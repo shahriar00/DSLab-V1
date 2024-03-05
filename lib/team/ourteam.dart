@@ -1,4 +1,5 @@
 import 'package:dslab/components/footer_view.dart';
+import 'package:dslab/notification/view/notification_view.dart';
 import 'package:flutter/material.dart';
 import '../events/event.dart';
 import 'dart:ui' as ui;
@@ -44,7 +45,9 @@ class _ourTeamState extends State<ourTeam> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                 onTap: (){ 
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const NotificationScreen()));
+                        },
                 child: Image.asset(
                   "images/notification.gif",
                   height: 40, // Adjust the height as needed

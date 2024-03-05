@@ -52,6 +52,9 @@ dependencies:
   google_fonts: 
   flutter_screenutil: 
   gap: 
+  google_sign_in:
+  firebase_ui_auth: 
+  provider: 
 
 dev_dependencies:
   flutter_test:

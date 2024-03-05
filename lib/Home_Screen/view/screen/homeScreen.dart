@@ -5,6 +5,7 @@ import 'package:dslab/Home_Screen/view/screen/Research_Page/research_full_page.d
 import 'package:dslab/Home_Screen/widget/curved_edges_top.dart';
 import 'package:dslab/components/bottom_navigation.dart';
 import 'package:dslab/components/footer_view.dart';
+import 'package:dslab/notification/view/notification_view.dart';
 import 'package:flutter/material.dart';
 import '../../widget/customButton.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,8 +14,8 @@ import 'Collaboration_page/Collaboration_with_Academia.dart';
 import 'Contribute_Page/Collabrote.dart';
 import 'Sabur_Khan_Page/sabur_khan_main.dart';
 
-class home extends StatelessWidget {
-  const home({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +48,14 @@ class home extends StatelessWidget {
                           width: 100,
                         ),
                       ),
-                      Image.asset(
-                        "images/notification.gif",
-                        scale: 2.25,
+                      GestureDetector(
+                         onTap: (){ 
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const NotificationScreen()));
+                        },
+                        child: Image.asset(
+                          "images/notification.gif",
+                          scale: 2.25,
+                        ),
                       ),
                     ],
                   ),
@@ -75,7 +81,9 @@ class home extends StatelessWidget {
             Container(
               height: 700.h,
               //width: double.infinity,
-              color: Color.fromRGBO(32, 72, 149, 1),
+                //     color: Color(0xFF48B0F6),
+             // color: Colors.teal,
+               color: Color.fromRGBO(32, 72, 149, 1),
               child: homeText(),
             ),
             Container(

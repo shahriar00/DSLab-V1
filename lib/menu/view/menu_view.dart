@@ -1,3 +1,5 @@
+import 'package:dslab/Home_Screen/view/screen/homeScreen.dart';
+import 'package:dslab/SiginUp%20and%20Sigin%20In/Buttom%20Navigation%20Bar/bottom_profile.dart';
 import 'package:dslab/Tranning/Pages/TrainingPage.dart';
 import 'package:dslab/about/view/about_us_view.dart';
 import 'package:dslab/contact/view/contact_view.dart';
@@ -367,7 +369,7 @@ const SizedBox(height: 10,),
 
                           IconButton(
                             onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationScreen()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>const NotificationScreen()));
                             },
                             icon: Image.asset(
                               'images/notification.gif',
@@ -483,7 +485,9 @@ const SizedBox(height: 10,),
                             width: 50,
                             height: 50,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomePage()));
+                          },
                         ),
                         const Text(
                           'Home',
@@ -521,7 +525,9 @@ const SizedBox(height: 10,),
                             width: 50,
                             height: 50,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                             Navigator.push(context, MaterialPageRoute(builder: (context)=>const MenuPage()));
+                          },
                         ),
                         const Text(
                           'Menu',
@@ -557,7 +563,9 @@ const SizedBox(height: 10,),
                             width: 50,
                             height: 50,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProfilePage(),));
+                          },
                         ),
                         const Text(
                           'Profile',

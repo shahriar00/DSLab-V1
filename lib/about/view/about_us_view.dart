@@ -1,6 +1,7 @@
 import 'package:drop_shadow/drop_shadow.dart';
 import 'package:drop_shadow_image/drop_shadow_image.dart';
 import 'package:dslab/about/widgets/custom_design.dart';
+import 'package:dslab/notification/view/notification_view.dart';
 import 'package:flutter/material.dart';
 
 class AboutUsScreen extends StatefulWidget {
@@ -34,9 +35,14 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                         "images/diu.png",
                         scale: 8,
                       ),
-                      Image.asset(
-                        "images/notification.gif",
-                        scale: 2,
+                      GestureDetector(
+                        onTap: (){ 
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const NotificationScreen()));
+                        },
+                        child: Image.asset(
+                          "images/notification.gif",
+                          scale: 2,
+                        ),
                       ),
                     ],
                   ),

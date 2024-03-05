@@ -4,6 +4,7 @@ import 'package:dslab/Tranning/Contents/TextResources.dart';
 import 'package:dslab/Tranning/Widgets/CustomInfoContainer.dart';
 import 'package:dslab/Tranning/Widgets/QuizCard.dart';
 import 'package:dslab/components/footer_view.dart';
+import 'package:dslab/notification/view/notification_view.dart';
 import 'package:flutter/material.dart';
 
 class CustomDesign extends CustomClipper<Path> {
@@ -279,9 +280,14 @@ class _TrainingPageState extends State<TrainingPage> {
                         "images/diu.png",
                         scale: 8,
                       ),
-                      Image.asset(
-                        "images/notification.gif",
-                        scale: 2,
+                      GestureDetector(
+                         onTap: (){ 
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const NotificationScreen()));
+                        },
+                        child: Image.asset(
+                          "images/notification.gif",
+                          scale: 2,
+                        ),
                       ),
                     ],
                   ),

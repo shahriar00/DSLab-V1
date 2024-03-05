@@ -3,6 +3,7 @@ import 'package:dslab/contact/widgets/contact_information.dart';
 import 'package:dslab/contact/widgets/contact_part.dart';
 import 'package:dslab/contact/widgets/footer.dart';
 import 'package:dslab/contact/widgets/google_map.dart';
+import 'package:dslab/notification/view/notification_view.dart';
 import 'package:flutter/material.dart';
 
 class ContactScreen extends StatefulWidget {
@@ -36,9 +37,14 @@ class _ContactScreenState extends State<ContactScreen> {
                         "images/diu.png",
                         scale: 8,
                       ),
-                      Image.asset(
-                        "images/notification.gif",
-                        scale: 2,
+                      GestureDetector(
+                       onTap: (){ 
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const NotificationScreen()));
+                        },
+                        child: Image.asset(
+                          "images/notification.gif",
+                          scale: 2,
+                        ),
                       ),
                     ],
                   ),

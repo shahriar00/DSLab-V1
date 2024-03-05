@@ -4,6 +4,7 @@ import 'package:dslab/about/widgets/custom_design.dart';
 import 'package:dslab/admin/widgets/custom_container.dart';
 import 'package:dslab/contact/admin/messege_view.dart';
 import 'package:dslab/notification/admin/view/pdf_upload.dart';
+import 'package:dslab/notification/view/notification_view.dart';
 import 'package:flutter/material.dart';
 
 class AdminScreen extends StatefulWidget {
@@ -37,9 +38,14 @@ class _AdminScreenState extends State<AdminScreen> {
                         "images/diu.png",
                         scale: 8,
                       ),
-                      Image.asset(
-                        "images/notification.gif",
-                        scale: 2,
+                      GestureDetector(
+                         onTap: (){ 
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const NotificationScreen()));
+                        },
+                        child: Image.asset(
+                          "images/notification.gif",
+                          scale: 2,
+                        ),
                       ),
                     ],
                   ),

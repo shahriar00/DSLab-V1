@@ -1,4 +1,5 @@
 import 'package:dslab/about/widgets/custom_design.dart';
+import 'package:dslab/admin/view/admin_view.dart';
 import 'package:dslab/admin/widgets/admin_cutom_button.dart';
 import 'package:dslab/contact/widgets/custom_button.dart';
 import 'package:dslab/notification/admin/view/pdf_upload.dart';
@@ -21,7 +22,7 @@ class _AdminSignInState extends State<AdminSignIn> {
   final _formkey = GlobalKey<FormState>();
 
   final String validEmail = 'admin@gmail.com';
-  final String validPassword = '123456';
+  final String validPassword = 'takelovesir';
 
   void _login() {
     String email = mailcontroller.text.trim();
@@ -32,7 +33,7 @@ class _AdminSignInState extends State<AdminSignIn> {
       // Navigate to  dashboard or perform any action here
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const PdfUploadPage()),
+        MaterialPageRoute(builder: (context) => const AdminScreen()),
       );
     } else {
       // Show error message for invalid login

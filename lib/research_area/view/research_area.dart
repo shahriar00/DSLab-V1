@@ -41,9 +41,14 @@ class _ResearchAreaState extends State<ResearchArea> {
                                   builder: (context) =>
                                       const NotificationScreen()));
                         },
-                        child: Image.asset(
-                          "images/notification.gif",
-                          scale: 2,
+                        child: GestureDetector(
+                           onTap: (){ 
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const NotificationScreen()));
+                        },
+                          child: Image.asset(
+                            "images/notification.gif",
+                            scale: 2,
+                          ),
                         ),
                       ),
                     ],

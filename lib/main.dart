@@ -1,6 +1,9 @@
 import 'dart:io';
 
 import 'package:dslab/Home_Screen/view/screen/homeScreen.dart';
+import 'package:dslab/Profile_Screen/Profile.dart';
+import 'package:dslab/SiginUp%20and%20Sigin%20In/Buttom%20Navigation%20Bar/bottom_navigation.dart';
+import 'package:dslab/SiginUp%20and%20Sigin%20In/Buttom%20Navigation%20Bar/bottom_profile.dart';
 import 'package:dslab/Tranning/Pages/TrainingPage.dart';
 import 'package:dslab/about/view/about_us_view.dart';
 import 'package:dslab/admin/view/admin_login.dart';
@@ -68,9 +71,10 @@ class MyApp extends StatelessWidget {
       ),
 
 
- home:const MenuPage(),
+ //home:const MyButtomNavBar(title: "",),
+ // home: ProfileScreen(name: "",PhotoUrl: "",),
 
-// home: const AboutUsScreen(),
+ home: const MenuPage(),
     );
        },
     );
